@@ -1,4 +1,10 @@
 <h2><%= @book.title %></h2>
 
-<p><%= @book.author %></p>
-<%= link_to "Back", books_path %>
+<pre>Author: <%= @book.author %></pre>
+<pre>Copies: <%= @book.no_of_copies %></pre>
+<br/>
+
+<%= link_to "Back", books_path %><br/>
+<%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "This will delete '#{@book.title}'"} %><br/>
+<%= link_to "Edit Details", edit_book_path(@book) %><br/>
+
