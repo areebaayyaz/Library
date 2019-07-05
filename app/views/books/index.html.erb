@@ -1,0 +1,13 @@
+<h1>List of books available in the library</h1>
+
+<ul id="books">
+ <% @books.each do |book| %>
+  <li>
+   <%= link_to book.title, book_path(book) %>
+  </li>
+ <% end %>
+</ul>
+
+<br/><br/>
+
+<%= link_to "Add another book", new_book_path, class: "new_book" %>
